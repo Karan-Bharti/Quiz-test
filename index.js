@@ -1,21 +1,21 @@
 var readlinesync=require('readline-sync');
 const chalk=require('chalk');
-console.log(chalk.blue('Hello World'));
+//console.log(chalk.blue('Hello World'));
 
 var score=0;
 
 var username=readlinesync.question("What is your name? ");
-console.log("Welcome "+username +" to the world of Harry Potter");
+console.log(chalk.blueBright("Welcome "+username +" to the world of Harry Potter"));
 console.log("Only type option alphabet in capital as answer")
 
 function play(question, answer){
   var useranswer=readlinesync.question(question);
 
   if( useranswer===answer){
-    console.log("You are right")
+    console.log(chalk.green("You are right"))
     score =score+1;
   }else{
-    console.log("You are wrong")
+    console.log(chalk.red("You are wrong"))
     score=score;
   }
    console.log("Score is "+score);
